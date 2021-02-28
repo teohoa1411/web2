@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form name='login' th:action="@{/login}" method='POST'>
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td><input type='text' name='userName' required ></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type='password' name='passWord' required /></td>
+        </tr>
+        <tr>
+            <td><input name="submit" type="submit" value="submit" /></td>
+        </tr>
+    </table>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+</form>
+</body>
+</html>
